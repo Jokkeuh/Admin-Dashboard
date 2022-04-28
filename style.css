@@ -1,39 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .container{
     display: grid;
     grid-template-columns:1fr 6fr;
-    border: 3px solid black;
-    height: 100vh;  
+    height: 110vh;
+    background-color:rgb(119, 156, 255);
+    z-index: -1;
+    
+    
+}
+.dashboardTitle{
+    z-index: 1;
+    color: white;
+    position: relative;
+    left: 57px;
+    bottom: 45px;
+    font-size: xx-large;
+}
+.dashboardLogo{
+    border: 2px solid black;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
 }
 input[type=text]{
-    width: 90%;
+    position: relative;
+    width: 80%;
+    left: 15px;
+}
+.searchLogo{
+    position: relative;
+    left: -10px;
+    bottom: 5px;
+
+}
+.headerBtns > button{
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+input[type=text]:hover,
+input[type=text]:active{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .header{
     display: grid;
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 5fr 3fr;
     grid-column: 2/3;
-    min-height: 175px;
-    max-height: 225px;
-    background: pink;
+    height: 12rem;
+    background: aliceblue;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .headerInput{
-    padding: 15px
+    margin-top: 10px;
+}
+
+.headerInput > button{
+    position: relative;
+    left: 25px;
+    bottom: -13px;
+    height: 25px; 
+    width: 25px;
+    border-style: none;
+    background-color: aliceblue;
+}
+
+.headerInput > button:hover{
     
+    border: 3px solid whitesmoke;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.headerInput > button:active{
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    
+
 }
 .profile{
+    display: grid;
     grid-column: 1;
 }
+.profile-name{
+    position: relative;
+    left: 7rem;
+    bottom: 3rem;
+}
 .profile-pic{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     width: 75px;
     height: 75px;
-    border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50%;
 }
 .profile-link{
     padding: 15px;
     grid-column: 2;
 }
 .userLink{
-    all: unset;
-    border: 3px solid black;
+    
+    
 }
 .tinyPic{
     position: relative;
@@ -42,49 +114,86 @@ input[type=text]{
     height: 25px;
     border: 2px solid white;
 }
+
 .headerBtns{
+    text-align: center;
     margin-bottom: 5px;
     position: relative;
-    top: -20px;
+    top: -50px;
     grid-row-start: 3;
     grid-column-start: 2;
+    
+    
 }
+.headerBtns > button{
+
+
+    padding:0px;
+    width: 100px;
+    height: 5vh;
+    border-radius: 21px;
+    
+    color: aliceblue;
+    background-color: rgb(20, 114, 202);
+}
+.headerBtns > button:hover{
+    background-color: rgb(29, 0, 190);
+}
+
 .sidebar{
-    height: 100vh;
+    height: 110vh;
     display: grid;
     grid-template-rows: 5vh 50vh 45vh;
     grid-column: 1/2;
     grid-row: 1/3;
-    background-color:blue;
+    background-color:rgb(20, 114, 202);
     min-width: 150px;
     gap:25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
 }
 .navBtn{
     display: grid;
     gap: 25px;
+    
 }
-.navBtn1 > button{
+.navBtn1 > div > button{
+    
+    position: relative;
+    left: 25px;
     all:unset;
-    padding: 10px;
+    padding-left: 30px;
     color:white;
     display: grid;
 }
-.navBtn1 > button:hover{
+.navBtn1 > div >img{
+    position: relative;
+    bottom:17px;
+    margin-left: 10px;
+}
+.navBtn1 > div > button:hover{
     
     color:rgb(201, 8, 8);
     display: grid;
 }
-.navBtn2 > button{
-    all: unset;
-    padding: 10px;
+.navBtn2 > div > button{
+    position: relative;
+    left: 25px;
+    all:unset;
+    padding-left: 30px;
+    color:white;
     display: grid;
-   color: grey;
 }
-.navBtn2 > button:hover{
+.navBtn2 > div >img{
+    position: relative;
+    bottom:17px;
+    margin-left: 10px;
+}
+.navBtn2 > div > button:hover{
     color:rgb(201, 8, 8);
     display: grid;
 }
+
 
 
 .content{
@@ -92,45 +201,118 @@ input[type=text]{
     grid-template-columns: 15fr 3fr;
     grid-template-rows:1fr 1fr;
     height: 75vh;
-    background-color: red;
-
+    background-color: rgb(119, 156, 255);
+    border-top:  20px solid rgb(119, 156, 255);;
+    
 }
 .container-projects{
     
     display: grid;
-    max-width: 99%;
+    max-width: 95%;
     gap: 20px;
+    height: 90%;
     min-height: 74vh;
     grid-template-columns: 2fr 2fr;
     text-align: center;
-    border: 2px solid black;
+    
+    
 }
     
 .project{
     display: grid;
-    border: 2px solid yellow;
+    border-left: 7px solid rgb(255, 60, 0);
     height: 100%;
-    width: 1fr;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    margin-top: -25px;
+    background: linear-gradient(90deg, rgb(176, 180, 245) 0%, rgb(184, 184, 255) 35%, rgb(210, 203, 245) 100%);
+}
+.project > div{
+}
+    
+.contentButton{
+    display: flex;
+    padding-bottom: 10px;
+    flex-direction: row-reverse;
+}
+.contentButton > button{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 10px;
+    border-style: none;
+    border-radius: 50%;
+}
+.contentButton > button:hover{
+    opacity: 0.2;
+    background-image: "1";
 }
 
 .right-bar{
-    border: 2px solid green;
+    
     display: grid;
     height: 100%;
     width: 100%;
     min-width: none;
-    gap: 25px;
+    gap: 70px;
     
 }
 .announcements{
-    border: 2px solid yellow;
+    padding: 10px;
+    border-left:3px solid rgb(153, 177, 223);
+    border-radius: 5%;
     gap: 15px;
     align-items: center;
     text-align: center;
 }
+
+.announcements > .announcements-content{
+    border-left: 2px solid rgb(255, 60, 0);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: small;
+
+}
+
+.announcements > .announcements-title{
+    margin-top: -35px;
+    color: white;
+    font-size: x-large;
+}
+
+.announcements-content > div{
+    display: grid;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
 .trending{
-    border: 2px solid darkgreen;
+    
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    bottom: 25px;;
+    border-left :2px solid rgb(153, 177, 223);
+    border-radius: 5%;
+    
 }
+.trending > .trending-title{
+    margin-top: -25px;
+    color: white;
+    font-size: x-large;
+
+}
+.trending > .trending-content{
+    display: grid;
+    text-align: center;
+    border-left: 2px solid rgb(255, 60, 0);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    width: 192px;
+    height: 15vh;
+}
+
 
